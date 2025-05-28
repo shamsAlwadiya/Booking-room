@@ -1,0 +1,60 @@
+[
+  {
+    "id": 1,
+    "name": "Single Room",
+    "description": "Our cozy Single Room is perfect for solo travelers seeking comfort and convenience. This well-designed room offers a comfortable single bed, essential amenities, and a quiet atmosphere to ensure a restful stay. Whether you’re traveling for business or leisure, the Single Room provides everything you need at an affordable price.",
+    "price": 120,
+    "image": "/images/Room1.avif"
+  },
+  {
+    "id": 2,
+    "name": "Meeting Room",
+    "description": "Our fully equipped Meeting Room provides the ideal environment for your business gatherings, presentations, and workshops. Designed to accommodate small to medium-sized groups, this space offers flexible seating arrangements, modern audiovisual equipment, and high-speed internet to support your productivity. Whether you're hosting a team meeting, training session, or client presentation, our Meeting Room ensures a comfortable and professional setting to help you achieve your goals.",
+    "price": 90,
+    "image": "/images/Room2.avif"
+  },
+  {
+    "id": 3,
+    "name": "Standard Room",
+    "description": "Relax in comfort and style in our well-appointed Standard Room, designed for both leisure and business travelers. This cozy room features a comfortable queen-sized bed (or two twin beds), a modern en-suite bathroom, and all the essential amenities to ensure a pleasant stay. Enjoy complimentary Wi-Fi, air conditioning, a flat-screen TV, and a work desk for your convenience. Whether you're staying for a short trip or a longer visit, our Standard Room offers great value without compromising on comfort.",
+    "price": 70,
+    "image": "/images/Room3.avif"
+  },
+  {
+    "id": 4,
+    "name": "Family Suite",
+    "description": "Enjoy spacious comfort and convenience in our Family Suite, perfect for families or groups traveling together. This suite features multiple bedrooms or a separate living area, providing ample space for everyone to relax and unwind. Equipped with modern amenities and thoughtful touches, the Family Suite offers a home-away-from-home experience with plenty of room for quality time and privacy.",
+    "price": 160,
+    "image": "/images/Room4.avif"
+  },
+  {
+    "id": 5,
+    "name": "Bookable rooms",
+    "description": "Choose from our range of comfortable and well-equipped rooms designed to suit every traveler’s needs. Whether you’re traveling solo, as a couple, with family, or for business, we have the perfect room for you. All our bookable rooms offer modern amenities, cleanliness, and a welcoming atmosphere to make your stay enjoyable and hassle-free.",
+    "price": 160,
+    "image": "/images/Room5.avif"
+  },
+  {
+    "id": 6,
+    "name": "Deluxe Suite",
+    "description": "Indulge in luxury and spaciousness with our Deluxe Suite, designed for guests who seek premium comfort and style. This exquisite suite features a large bedroom, a separate living area, and upscale amenities to create a refined and relaxing atmosphere. Perfect for special occasions, business travelers, or those wanting a truly memorable stay.",
+    "price": 160,
+    "image": "/images/Rooms6.jpg"
+  
+  },
+  {
+    "id": 7,
+    "name": "traditional offices",
+    "description": "Our Traditional Offices offer a classic and professional workspace tailored for businesses that value privacy, focus, and a dedicated environment. Designed with comfort and functionality in mind, these offices provide a quiet setting equipped with essential office amenities to support your daily operations. Ideal for startups, small businesses, or established companies seeking a dependable space to grow.",
+    "price": 160,
+    "image": "/images/Room7.jpg"
+  
+  },
+  {
+    "id": 8,
+    "name": "specialty workspaces",
+    "description": "Discover our Specialty Workspaces designed to meet the unique needs of creative professionals, entrepreneurs, and niche industries. Whether you require a quiet studio, a collaborative maker space, or a tech-enabled lab, these versatile workspaces provide tailored environments to fuel innovation and productivity. Equipped with specialized tools and flexible layouts, our Specialty Workspaces support your specific work style and business demands.",
+    "price": 160,
+    "image": "/images/Room8.jpg"
+  }
+]

@@ -1,0 +1,71 @@
+.roomDetails .left-arrow{
+    top: 18%;
+    transform: translateY(-50%);
+    font-size: 25px;
+    color: #784800;
+    cursor: pointer;
+    position: absolute;
+    left: 60px;
+    border-radius: 10px;
+    border: 1px solid #784800;
+}
+.roomDetails .left-arrow:hover{
+    color: #C78118;
+
+}
+.room{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 30px;
+}
+.room img {
+    width: 550px;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-left: 30px;
+
+}
+.room .room-right{
+    margin-left: 40px;
+    flex: 1;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+.room .room-right h1{
+    font-size: 40px;
+    font-weight: 600;
+    margin-bottom: 10px;
+
+}
+.room .room-right p{
+    font-size: 18px;
+    color: #555;
+    width: 70%;
+}
+.room .room-right p span{
+    font-weight:700;
+    color: #000;
+}
+.room .room-right button{
+    background-color: #784800;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #784800;
+    color: #FFEFD7;
+    width: 100px;
+    height: 50px;
+    font-size: 16px;
+    font-weight: 600;
+    transition: 0.3s ease-in all;
+}
+.room .room-right button:hover{
+    background-color: #fff;
+    color: #784800;
+}
