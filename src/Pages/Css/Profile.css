@@ -1,0 +1,30 @@
+.profile{
+    margin-top: 150px;
+}
+.profile .profile-icon-main{
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+    
+}
+.profile .profile-icon-main img.avatar{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.profile .edit-profile-btn{
+    background-color: #fff;
+    border: 1px solid #000;
+    font-size: 20px;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    transition: 0.3s ease all;
+
+}
+.profile .edit-profile-btn:hover{
+    background-color: #000;
+    color: #fff;
+
+}

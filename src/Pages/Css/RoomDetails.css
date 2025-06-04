@@ -1,3 +1,8 @@
+
+.roomDetails{
+    margin-top: 150px;
+
+}
 .roomDetails .left-arrow{
     top: 18%;
     transform: translateY(-50%);
@@ -64,6 +69,7 @@
     font-size: 16px;
     font-weight: 600;
     transition: 0.3s ease-in all;
+    cursor: pointer;
 }
 .room .room-right button:hover{
     background-color: #fff;

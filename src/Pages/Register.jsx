@@ -14,9 +14,8 @@ const Register = () => {
   const navigate = useNavigate();
 
   const handleSignup = async (e) => {
-    e.preventDefault(); // لازم تمنع الريفرش في الفورم
+    e.preventDefault();
 
-    // تحقق من الحقول الفارغة
     if (!firstName || !lastName || !email || !password || !confirmPassword) {
       setError("Please fill in all fields");
       setSuccess("");
@@ -41,7 +40,7 @@ const Register = () => {
       return;
     }
 
-    setError(""); // امسح الأخطاء قبل التسجيل
+    setError(""); 
 
     try {
       const response = await axios.post("https://mybooking-app.com/api/register", {
@@ -52,17 +51,14 @@ const Register = () => {
         confirmPassword,
       });
 
-      // إذا التسجيل ناجح (مثلاً لو السيرفر رجع status 200)
       if (response.status === 200 || response.status === 201) {
         setSuccess("Registration successful!");
 
-        // تأخير التنقل عشان المستخدم يشوف رسالة النجاح
         setTimeout(() => {
           navigate("/");
         }, 1500);
       }
     } catch (err) {
-      // لو في خطأ من السيرفر
       if (err.response && err.response.data && err.response.data.message) {
         setError(err.response.data.message);
       } else {
@@ -72,7 +68,6 @@ const Register = () => {
     }
   };
 
-  // تفريغ رسالة الخطأ لما المستخدم يغير أي حقل
   const handleInputChange = () => {
     if (error) setError("");
     if (success) setSuccess("");

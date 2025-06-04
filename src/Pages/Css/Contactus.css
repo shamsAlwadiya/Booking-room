@@ -1,0 +1,50 @@
+.contactus{
+    margin-top: 150px;
+}
+.contactus h2{
+    font-size: 40px;
+    color: #784800;
+    font-weight: 600;
+    text-align: center;
+
+}
+.contactus-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    padding: 10px;
+    width: 100%;
+
+}
+.contactus-container .contactus-form{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.contactus-form input{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #333;
+    margin-right: 180px;
+}
+.contactus-form button{
+    width: 30%;
+    padding: 10px;
+    background-color: #784800;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s ease all;
+
+}
+.contactus-form button:hover{
+    background-color: #573603;
+    border: 1px solid #573603;
+}

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import "./Css/Login.css";
 import { signInWithPopup } from "firebase/auth";
 import { auth, provider } from "../firebase";
@@ -8,21 +8,33 @@ import { Link } from "react-router-dom";
 import { FcGoogle } from "react-icons/fc";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import axios from "axios";
+import { AuthContext } from "../Context/AuthContext";
 const Login = () => {
+  const {setIsLoggedIn ,setUsername} =useContext(AuthContext);
   const navigate = useNavigate();
   navigate('/');
   const githubProvider = new GithubAuthProvider();
 
 const handleGithubLogin = async () => {
-  try {
-    const result = await signInWithPopup(auth, githubProvider);
-    const user = result.user;
-    console.log("GitHub user:", user);
-    navigate('/');
-  } catch (error) {
-    console.error("GitHub login error:", error);
-  }
-};
+                        try {
+                          const result = await signInWithPopup(auth, provider);
+                          const user = result.user;
+                          console.log("github User:", user);
+                          setShowGithub(false);
+                          setSuccess(true);
+                          setError(false);
+                          setIsLoggedIn(true)
+                          setUsername(user.displayName || user.email);
+                          localStorage.setItem('user',JSON.stringify(user))
+                          navigate('/')
+
+                        } catch (error) {
+                          console.error("github Login Error:", error);
+                          setError(true);
+                          setSuccess(false);
+                        }
+                      }
+
 const handleGoogleLogin = async () => {
                         try {
                           const result = await signInWithPopup(auth, provider);
@@ -31,6 +43,11 @@ const handleGoogleLogin = async () => {
                           setShowGoogle(false);
                           setSuccess(true);
                           setError(false);
+                          setIsLoggedIn(true)
+                          setUsername(user.displayName || user.email);
+                          localStorage.setItem('user',JSON.stringify(user))
+                          navigate('/')
+
                         } catch (error) {
                           console.error("Google Login Error:", error);
                           setError(true);
@@ -43,7 +60,7 @@ const handleGoogleLogin = async () => {
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState(false);
   const [showGoogle, setShowGoogle] = useState(false);
-  const [showLinkedIn, setShowLinkedin] = useState(false);
+  const [showGithub, setShowGithub] = useState(false);
   const [googleEmail, setGoogleEmail] = useState("");
 
   const handleLogin = async(e) => {

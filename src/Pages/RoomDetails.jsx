@@ -1,13 +1,26 @@
-import React from 'react'
-import { useParams ,Link} from 'react-router-dom'
+import React, { useContext } from 'react'
+import { useParams ,Link, useNavigate} from 'react-router-dom'
 import { useState } from 'react'
 import rooms from '../Components/Assets/data/rooms.json'
 import './Css/RoomDetails.css'
 import { FaArrowLeft } from 'react-icons/fa';
 import Rooms from './Rooms'
+import { AuthContext } from '../Context/AuthContext'
 
 
 const RoomDetails = () => {
+  const {username} =useContext(AuthContext);
+  const navigate = useNavigate();
+  const handleClicklogin=()=>{
+    if(!username){
+      <p>Please login or sign up to book rooms</p>
+      navigate('/login')
+      
+    }else{
+      navigate(`/bookingform/${room.id}`)
+
+    }
+  }
   const [availableRoom , setAvailableRoom] = useState(rooms);
   const {roomId} = useParams();
   const room =rooms.find(room =>room.id===Number(roomId));
@@ -22,7 +35,7 @@ const RoomDetails = () => {
   }else{
     return(
       <div className='roomDetails'>
-        <Link to='/rooms'><button className='left-arrow'>Back</button></Link>
+        <Link to='/rooms'><button className='left-arrow' onClick={handleClicklogin}>Back</button></Link>
         <div className="room" key={room.id}>
           <div className="room-left">
               <img src={room.image} alt="" />
@@ -33,7 +46,7 @@ const RoomDetails = () => {
                 <p>
                   <span>Price:</span> ${room.price}
                 </p>
-                <Link to='/myBooking'><button>Book Now</button></Link>
+              <button onClick={handleClicklogin}>Book Now</button>
               </div>
             </div>
 
@@ -41,11 +54,6 @@ const RoomDetails = () => {
     )
   }
   
-  return (
-    <div className='roomdetails'>
-      <h1>Room Details</h1>
-    </div>
-  )
 }
 
 export default RoomDetails

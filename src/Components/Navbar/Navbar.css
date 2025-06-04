@@ -1,8 +1,20 @@
 .navbar{
     display: flex;
-    margin: 10px 50px;
     justify-content: space-between;
     align-items: center;
+    position: fixed;    
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;  
+    z-index: 1000;       
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 0px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); 
+    
+   
 }
 .navbar h1{
     color: #784800;
@@ -37,6 +49,72 @@
 }
 .navbar ul li:hover{
     color: #C78118;
+}
+.profile-wrapper {
+  position: relative;
+}
+
+.profile-icon {
+  width: 140px;
+  height: 140px;
+  color: white;
+  font-weight: bold;
+  font-size: 25px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  background-color:#555;
+}
+
+.dropdown {
+  position: absolute;
+  right: 0;
+  top: 50px;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  padding: 10px;
+  width: 150px;
+  z-index: 10;
+  text-align: center;
+  font-weight: 700;
+}
+.dropdown .username{
+  color: #555;
+}
+
+.your-profile-top{
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  text-align: left;
+  font-weight: 700;
+}
+.your-profile-top .content{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  transition: 0.3s ease all;
+  padding: 5px;
+}
+.your-profile-top .content:hover{
+  background-color: #ccc;
+  border-radius: 10px;
+}
+.your-profile-down {
+  transition: 0.3s ease all;
+  padding: 5px;
+  cursor: pointer;
+}
+.your-profile-down:hover{
+  background-color: #ccc;
+  border-radius: 10px;
 }
 
 .navbar .navbar-loginsignup button{
