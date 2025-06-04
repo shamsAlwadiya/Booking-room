@@ -4,15 +4,18 @@ import "./Css/Home.css";
 const Home = () => {
   return (
     <div className="home-page">
-      <section className="hero">
-        <h1>Welcome to your ideal destination for relaxation</h1>
-        <p>
-          Book your room easily and enjoy a comfortable and relaxing experience.
-        </p>
-        <Link to="/rooms" className="btn">
-          Explore Now
-        </Link>
-      </section>
+    <section className="hero">
+  <div className="overlay">
+    <h1>Welcome to your ideal destination for relaxation</h1>
+    <p>
+      Book your room easily and enjoy a comfortable and relaxing experience.
+    </p>
+    <Link to="/rooms" className="btn">
+      Explore Now
+    </Link>
+  </div>
+</section>
+
 
       {/* Services Section */}
       <section className="services">

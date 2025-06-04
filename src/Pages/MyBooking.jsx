@@ -69,22 +69,27 @@ const MyBooking=()=>{
               ):
               ( booking.date)
               }</td>
-              <td>{editingId ===booking.id ?(
-                <input
-                type="time"
-                name="time"
-                value={editDate.time}
-                onChange={handleChange}
-                placeholder="e.g., 2:00 PM"
-                />
-              )
-            :(
-              booking.time
-            )}</td>
+             <td>
+  {editingId === booking.id ? (
+    <select
+      name="time"
+      value={editDate.time}
+      onChange={handleChange}
+    >
+      <option value="">-- Choose a time --</option>
+      <option value="9:00 AM - 11:00 AM">9:00 AM - 11:00 AM</option>
+      <option value="12:00 PM - 2:00 PM">12:00 PM - 2:00 PM</option>
+      <option value="3:00 PM - 5:00 PM">3:00 PM - 5:00 PM</option>
+    </select>
+  ) : (
+    booking.time
+  )}
+</td>
+
               <td>
                 {editingId===booking.id ?
                 (
-                  <button className="save-btn" onClick={()=>handleSave(booking.id)}>Save</button>
+                  <button className="save-btn" onClick={()=>handleSave(booking.id)} style={{marginRight:'10px'}}>Save</button>
                 ):
                 (
                   <button className="edit-btn" onClick={() => handleEdit(booking)}>Edit</button>

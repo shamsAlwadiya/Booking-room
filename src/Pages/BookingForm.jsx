@@ -5,7 +5,7 @@ import './Css/BookingForm.css';
 import {BookingContext} from '../Context/BookingContext';
 
 const BookingForm = () => {
-
+  const [editedTime ,setEditedTime]=useState('')
   const {bookings ,addBooking}=useContext(BookingContext);
   const navigate =useNavigate();
   const handleSubmit =(e)=>{
@@ -58,17 +58,18 @@ useEffect(() => {
       <form onSubmit={handleSubmit}>
         <label htmlFor="time">Select Time:</label>
         <select
-          id="time"
-          value={selectedTime}
-          onChange={(e) => setSelectedTime(e.target.value)}
-        >
-          <option value="">-- Choose a time --</option>
-          {availableTimes.map((time, index) => (
-            <option key={index} value={time}>
-              {time}
-            </option>
-          ))}
-        </select>
+  id="time"
+  value={selectedTime}
+  onChange={(e) => setSelectedTime(e.target.value)}
+>
+  <option value="">-- Choose a time --</option>
+  {availableTimes.map((time, index) => (
+    <option key={index} value={time}>
+      {time}
+    </option>
+  ))}
+</select>
+
         <button type="submit">Confirm Booking</button>
       </form>
     </div>
